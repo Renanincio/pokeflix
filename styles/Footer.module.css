@@ -1,0 +1,130 @@
+.footer{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer .content{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+    height: 100%;
+}
+
+.footer .content form fieldset{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid orange;
+    box-shadow: 0 0 5px orange;
+    padding: 56px;
+    border-radius: 30px;
+    color: white;
+}
+
+.footer .content form fieldset input, .footer .content form fieldset textarea{
+    border-radius: 12px;
+    margin: 12px 0;
+    padding: 4px 12px;
+    border: none;
+    background-color: #16191E;
+    color: white;
+}
+
+.footer .content form fieldset textarea{
+    height: 70px;
+}
+
+.footer .content form fieldset input:focus, .footer .content form fieldset textarea:focus{
+    background-color: #16191E;
+}
+
+.footer .content form fieldset button{
+    color: white;
+    max-width: 150px;
+    padding: 3px 0;
+    cursor: pointer;
+    background-color: #16191E;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    transition: all .4s;
+}
+
+.footer .content form fieldset button:hover{
+    border-color: orange;
+    box-shadow: 0 0 5px orange;
+}
+
+.footer .content .links{
+    color: orange;
+}
+
+.footer .content .links a span{
+    text-decoration: none;
+    color: orange;
+    font-size: 28px;
+}
+
+.footer .copy{
+    color: white;
+    margin: 0 auto;
+    text-align: center;
+    padding: 8px;
+}
+
+@media (max-width: 720px){
+    .footer{
+        min-height: 100vh;
+        margin-top: 70px;
+        width: 100%;
+    }
+
+
+    .footer .content{
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 0 auto;
+        padding: 0px;
+    }
+
+    .footer .content .links{
+        text-align: center;
+        margin: 20px;
+    }
+
+    .footer .content form fieldset legend{
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .footer .content form fieldset legend h1{
+        font-size: 24px;
+    }
+
+    .footer .content form fieldset button:hover{
+        color: white;
+        border: transparent 1px solid;
+        box-shadow: none;
+    }
+}
+
+@media (max-width: 380px){
+
+    .footer .content form{
+        max-width: 250px;
+        margin: 0 auto;
+    }
+
+    .footer .content form fieldset{
+        padding: 46px 23px;
+    }
+
+    .footer .content form fieldset button{
+        width: 150px;
+        margin: 0 auto;
+    }
+}

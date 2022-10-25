@@ -1,129 +1,156 @@
-.container {
-  padding: 0 2rem;
+.main{
+  background-image: url(../public/images/592678.jpg);
+  background-color: rgba(17, 20, 26, 1);
+  background-blend-mode: multiply;
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  box-shadow: inset 0 0 150px 70px rgb(17, 18, 26);
+  min-height: 100vh;
+  width: 100%;
 }
 
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
+.main .container{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+}
+
+.main .container .content{
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  padding: 30px;
+  line-height: 18px;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.main .container .content h1{
+  margin-bottom: 14px;
+  color: white;
+  font-weight: bolder;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.main .container .content h1 span{
+  color: orange;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.main .container .content h4{
+  color: orange;
+  max-width: 100%;
+  margin-bottom: 22px;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.main .container .content p{
+  max-width: 600px;
+  color: white;
+  margin-bottom: 28px;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
-}
-
-.title,
-.description {
+.main .container .content a{
   text-align: center;
-}
-
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
+  color: white;
+  font-weight: 700;
+  background-color: #16191E;
+  padding: 12px 18px;
   text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+  border-radius: 30px;
+  width: 340px;
+  transition: all .4s;
+  border: 1px solid #16191E;
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.main .container .content a:hover{
+  border-color: orange;
+  color: orange;
+  background-color: transparent;
+  box-shadow: 0 0 5px orange;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.main .container .card1{
+  width: 300px;
+  height: 450px;
+  background-image: url(../public/images/661559.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 30px;
+  box-shadow: 0 0 3px orange;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+@media(max-width: 1280px) {
+  .main .container .content{
+    max-width: 450px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .main .container .content a{
+    margin: 0 auto;
+  }
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
+@media(max-width: 1080px) {
 
-@media (max-width: 600px) {
-  .grid {
+  .main .container{
     width: 100%;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .main .container .card1{
+    margin: 0 auto;
+    width: 200px;
+    height: 300px;
+  }
+
+  .main .container .content{
+    max-width: 90%;
+  }
+
+  .main .container .content h1{
+    font-size: 24px;
+  }
+
+  .main .container .content h4{
+    font-size: 14px;
+  }
+
+  .main .container .content p{
+    font-size: 12px;
+  }
+
+  .main .container .content a{
+    padding: 7px;
+    font-size: 14px;
+    width: 250px;
+    max-width: 100%;
   }
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
+@media (max-width: 720px){
+  .main{
+    background-color: rgba(17, 20, 26, .9);
+    background-image: url(../public/images/pokemon-go-do-720x1280.jpg);
+    box-shadow: inset 0 0 70px 60px #101218;
   }
-  .code {
-    background: #111;
+}
+
+@media(max-width: 380px) {
+  .main .container .content{
+    max-width: 95%;
+    text-align: center;
+    margin: 0 auto;
   }
-  .logo img {
-    filter: invert(1);
+
+  .main .container .content h4{
+    font-size: 12px;
+  }
+
+  .main .container .content p{
+    font-size: 10px;
+  }
+
+  .main .container .content a{
+    font-size: 12px;
   }
 }

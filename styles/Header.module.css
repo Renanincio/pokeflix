@@ -1,0 +1,191 @@
+.header{
+    padding: 20px;
+}
+
+.header header{
+    color: white;
+    width: 95%;
+    height: 70px;
+    background-color: #16191E;
+    border-radius: 30px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header header div, .header header nav{
+    margin: 20px;
+}
+
+.header header div a{
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+}
+
+.header header div a p{
+    font-size: 22px;
+    font-weight: bolder;
+}
+
+.header header div a p span{
+    color:orange;
+
+}
+
+.header header .navMobile{
+    display: none;
+}
+
+.header header div nav{
+    display: flex;
+    align-items: center;
+}
+
+.header header div .iconLink{
+    background-color: transparent;
+    border: 1px solid orange;
+    border-radius: 25px;
+    margin-right: 12px;
+    padding:  3px 24px;
+    display: flex;
+    align-items: center;
+}
+
+.header header div .iconLink:hover{
+    box-shadow: 0 0 3px orange;
+}
+
+.header header div .iconLink li .iconA{
+    color: orange;
+    font-size: 36px;
+}
+
+.header header div ul{
+    display: flex;
+}
+
+.header header div ul li{
+    list-style: none;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.header header div ul li{
+    color: orange;
+    font-size: 22px;
+    transition: all .2s;
+    cursor: pointer;
+}
+
+.header header div ul li:hover, .header header div ul li:hover a{
+    color: white;
+}
+
+.header header div ul li a{
+    font-size: 18px;
+    color: orange;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-style: italic;
+    transition: all .2s;
+    padding-left: 8px;
+}
+
+@media (max-width: 1280px){
+
+    .header header div, .header header nav{
+        margin: 13px;
+    }
+
+    .header header div a p{
+        font-size: 16px;
+    }
+
+    .header header div a .image{
+        display: none;
+    }
+
+    .header header div nav .iconLink{ 
+        display:none;
+    }
+
+    .header header div ul li a{
+        font-size: 14px;
+        padding-left: 4px;
+    }
+}
+
+@media (max-width: 720px){
+    .header header .logo{
+        display: none;
+    }
+
+    .header header div{
+        width: 100%;
+    }
+
+    .header header div .navDesktop{
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    .header header div .navDesktop ul{
+        justify-content: space-evenly;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .header header div .navDesktop ul li a{
+        font-size: 12px;
+    }
+
+    .header header div ul li:hover, .header header div ul li:hover a{
+        color: orange;
+    }
+}
+
+@media (max-width: 380px){
+
+    .header header .divDesktop{
+        display: none;
+    }
+
+    .header header .navDesktop{
+        display: none;
+    }
+
+    .header header .navMobile{
+        display: block;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .header header .navMobile nav{
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header header .navMobile nav ul{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        width: 100%;
+    }
+
+    .header header .navMobile nav ul li{
+        list-style: none;
+    }
+
+    .header header .navMobile nav ul li a{
+        text-decoration: none;
+        color: orange;
+        font-size: 22px;
+    }
+}

@@ -1,0 +1,23 @@
+.s1{
+    font-weight: bold;
+    text-transform: capitalize;
+    margin-right: 12px;
+}
+
+.b1{
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    border-radius: 5px;
+    height: 8px;
+    margin-bottom: 12px;
+    max-width: 250px;
+}
+
+.b2{
+    border: solid 1px white;
+    background-color: transparent;
+    width: 250px;
+    border-radius: 5px;
+    height: 9px;
+}
