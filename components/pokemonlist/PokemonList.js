@@ -7,7 +7,7 @@ export default function PokemonList({ item, type }) {
         <>
             <div className={styles.pokemonList}>
                 {item.map((pokemon) => (
-                    <div className={styles.card}>
+                    <div key={pokemon.id} className={styles.card}>
                         <Image
                             src={`https://cdn.traction.one/pokedex/pokemon/${pokemon.id}.png`}
                             width="120"

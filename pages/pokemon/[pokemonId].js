@@ -61,7 +61,7 @@ export default function Pokemon({ pokemon }) {
             </h4>
             <p><span>Altura:</span> {pokemon.height * 10} cm <span>Peso:</span> {pokemon.weight / 10} kg</p>
             <div>{pokemon.stats.map((stat) => (
-              <Pokestats name={stat.stat.name} width={stat.base_stat}/>
+              <Pokestats key={pokemon.id} name={stat.stat.name} width={stat.base_stat}/>
              ) )}</div>
           </div>
         </div>

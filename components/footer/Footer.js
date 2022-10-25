@@ -23,8 +23,8 @@ export default function Footer() {
                     </form>
 
                     <div className={styles.links}>
-                        <a href='https://www.linkedin.com/in/renan-inacio-968401240/' target="_blank"><span><AiFillLinkedin /></span></a>
-                        <a href='https://github.com/Renanincio' target="_blank"><span><AiFillGithub /> </span></a>
+                        <a href='https://www.linkedin.com/in/renan-inacio-968401240/' target="_blank" rel="noopener noreferrer"><span><AiFillLinkedin /></span></a>
+                        <a href='https://github.com/Renanincio' target="_blank" rel="noopener noreferrer"><span><AiFillGithub /> </span></a>
                         <p><MdEmail />renanincioprgmdr@gmail</p>
                         <p><AiFillPhone />+55 21 97494-1136</p>
                     </div>
