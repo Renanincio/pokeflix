@@ -4,34 +4,35 @@ import Image from 'next/image.js'
 import Pokestats from '../../components/pokestats/pokestats.js'
 
 export const getStaticPaths = async () => {
+  return {
+    paths: [],
+    fallback: 'blocking',
+  };
+};
+
+export const getStaticProps = async (context) => {
   const maxPokemons = 898
   const api = `https://pokeapi.co/api/v2/pokemon/`
 
   const res = await fetch(`${api}/?limit=${maxPokemons}`)
 
-  const data = await res.json()
+  const dataId = await res.json()
 
-  const paths = data.results.map((pokemon, index) => {
+  const paths = dataId.results.map((pokemon, index) => {
     return {
       params: { pokemonId: index.toString() },
     }
   })
 
-  return {
-    paths,
-    fallback: false,
-  }
-}
-
-export const getStaticProps = async (context) => {
   const id = context.params.pokemonId
 
-  const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+  const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
 
-  const data = await res.json()
+  const data = await response.json()
 
   return {
-    props: { pokemon: data },
+    props: { pokemon: data, pokemonId: paths },
+
   }
 }
 
